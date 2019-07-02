@@ -1,0 +1,29 @@
+html, body
+	{
+	font-family: 'poppins', sans-serif;
+	color: #ffff;
+	background-image: linear-gradient(45deg, #0066ff, #9900ff);
+	letter-spacing: 5px;
+	margin: 0;
+	/* padding: 20px; */
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	}
+
+.myProfile
+	{
+	font-size: 100px; 
+	}
+
+h3
+	{
+	font-size: 25px;
+	font-weight: 500;
+	}
+
+.card-link
+	{
+	font-family: 'Nunito';
+	padding: 20px;
+	}
