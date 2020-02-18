@@ -1,41 +1,49 @@
 *
 {
-	margin: 0;
-	padding: 0;
+	margin    : 0;
+	padding   : 0;
 	box-sizing: border-box;
 }
+
 body
 {
-	font-family: Montserrat;
-	background: #fcfcff;
+	font-family: 'Roboto';
+	background : #fcfcff;
 }
 
 /*root*/
+
 section
 {
 	min-height: 100vh;
 }
 
+span
+{
+	color      : #FE8008;
+	font-weight: 500;
+}
+
 a:hover
 {
 	text-decoration: none;
-	color: #ffffff;
 }
 
 .btn-custom
 {
-	color: #ffffff;
-	font-weight: 500;
+	color        : #ffffff;
 	border-radius: 2px;
-	padding: 10px;
-	background: #FE8008 !important;
+	padding      : 10px;
+	background   : #FE8008 !important;
 }
 
 .title-section
 {
-	font-size: 30px;
-	margin: 50px 0 30px 0;
-	text-align: center;
+	margin     : 25px 0 25px 0;
+	text-align : center;
+	font-size  : 25px;
+	color: #FE8008 !important; 
+	font-weight: 500;
 }
 
 .text-sm
@@ -52,189 +60,196 @@ a:hover
 {
 	color: #FE8008 !important;
 }
+
+.border-title
+{
+	border-top: 1px solid;
+	padding: 10px;
+	width: 200px;
+	color: #ffdab7 !important;
+	position: relative;
+	margin: 10px 0 2px 0;
+}
+
+.border-title::after
+{
+	content: '';
+	color: #ffdab7 !important;
+	border-top: 1px solid;
+	padding: 10px 180px 0 0;
+	width: 800px;
+	position: relative;
+	margin: 10px 0 30px 0;
+}
+
 /*/root*/
 .navbar
 {
 	background: #ffffff;
-	font-size: 14px;
-	height: 100px;
+	font-size : .75em;
+	box-shadow: 0 0 0.75rem rgba(0,0,0,.1);
 }
 
 .navbar ul li a
 {
-	color:  #707070 !important;
+	color       : #707070 !important;
 	margin-right: 10px;
-	font-weight: 500;
+	font-weight : 500;
 }
 
 .navbar ul li a:hover
 {
-	color: #ffffff !important;
+	color        : #ffffff !important;
 	border-radius: 2px;
-	background: #FE8008;
+	background   : #FE8008;
 }
 
 .banner img
 {
 	position: relative;
-	width: 100%;
-	height: 100vh;
+	width   : 100%;
+	background-repeat: no-repeat;
+	height  : 100vh;
+	background-size: cover;
 }
 
 .banner::after
 {
-	content: '';
-	display: block;
-	position: absolute;
-	background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
-	height: 100%;
-	width: 100%;
-	bottom: 0;
+	content         : '';
+	display         : block;
+	position        : absolute;
+	background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+	height          : 80%;
+	width           : 100%;
+	bottom          : 0;
 }
 
 .title-banner
 {
-	position: absolute;
-	z-index: 99;
-	top: 40vh;
-	width: 100%;
-	max-height: 100vh;
+	position  : absolute;
+	z-index   : 99;
+	top       : 40vh;
+	width     : 100%;
+	max-height: 90vh;
 	text-align: center;
 }
 
 .title-banner h5
 {
-	color: #ffffff;
-	margin-top?: -30%;
-	font-size: 6vw;
+	font-family: arizonia;
+	color      : #ffffff;
+	font-size  : 45px;
 	text-shadow: 0 .1px 10px #000000;
 }
 
 .title-banner p
 {
-	font-size: 1.50vw;
-	font-weight: 400;
-	color: #F5F5F5;
+	font-size    : 12px;
+	font-weight  : 300;
+	color        : #F5F5F5;
 	margin-bottom: 50px;
+	font-family: 'lato';
 }
 
-.banner .btn-custom
+.title-banner a
 {
-	font-size: 1.6vw;
+	font-size: 12px;
+	font-weight: 200;
+	letter-spacing: 2px;
 }
 
 /*section paket trip*/
-figure
+.figure, .figure img
 {
-	position: relative;
-}
-
-.img-paket
-{
-	width: 350px;
+	position     : relative;
+	overflow     : hidden;
+	width        : 100%;
+	max-width    : 500px;
+	height       : 250px;
+	transition   : transform .9s ease;
 	border-radius: 4px;
-	height: 400px;
-	overflow: hidden;
-	box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.50) !important;
 }
 
-.img-paket-trip
+.figure:hover img
 {
-	max-height: 400px;
-	max-width: 350px auto;
+	transform: scale(1.2);
+
 }
 
 .figure::after
 {
-	content: '';
-	display: block;
-	position: absolute;
-	opacity: 0.8;
-	background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
-	height: 50%;
-	width: 350px;
-	border-radius: 4px;
-	bottom: 0;
+	content         : '';
+	display         : block;
+	position        : absolute;
+	opacity         : 0.8;
+	background-image: linear-gradient(to top, rgba(0,0,0,1.5), rgba(0,0,0,.2));
+	height          : 100% !important;
+	width           : 100%;
+	bottom          : 0;
+	border-radius   : 4px;
 }
 
 .caption-paket-trip
 {
-	position: absolute;
-	bottom: 0;
-	z-index: 99;
-	padding: 0 0 20px 20px;
+	position      : absolute;
+	bottom        : 0;
+	z-index       : 99;
+	padding       : 0 10px 5px 10px;
 	letter-spacing: 1px;
+}
+
+.caption-paket-trip .paket
+{
+	font-weight: bold;
+	color: #FE8008 !important; 
 }
 
 .caption-paket-trip .title-paket
 {
-	font-size: 16px;
-	color: #F6F6FF;
-	font-weight: 700;
-}
-
-.caption-paket-trip .title-paket span
-{
-	color: #FE8008;
+	font-size  : 16px;
+	color      : #F6F6FF;
+	font-weight: 400;
 }
 
 .caption-paket-trip .price-paket
 {
-	font-size: 12px; 
-	color: #A9A9AE;
+	font-size  : 12px; 
+	color      : #A9A9AE;
 	font-weight: 400;
 }
 
-.img-paket a
-{
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(0,0,0,0.7);
-	opacity: 0;
-	transition: opacity 0.3s;
-	z-index: 98;
-}
-
-.img-paket:hover a
-{
-	opacity: 1;
-	color: salmon;
-}
 /*/section paket trip*/
 
 /*section testimoni*/
 .carousel-testimoni
 {
 	justify-content: center;
-	text-align: center;
+	text-align     : center;
 }
 
 .carousel-testimoni h5
 {
-	font-size: 16px;
+	font-size  : 16px;
 	font-weight: 700;
-	margin: 10px 0 20px 0;
+	margin     : 10px 0 20px 0;
 }
 
 .carousel-testimoni p
 {
-	font-size: 14px;
+	font-size    : 14px;
 	margin-bottom: 50px;
 }
 
 .carousel-icon li
 {
-	height: 15px;
-	width: 15px;
-	margin: 10px 5px 0 0;
-	border-radius: 50%;
-	display: inline-block;
-	transition: opacity 0.6s ease;
-	opacity: 0.5;
-    background-color: #24324D;
+	height          : 15px;
+	width           : 15px;
+	margin          : 10px 5px 0 0;
+	border-radius   : 50%;
+	display         : inline-block;
+	transition      : opacity 0.6s ease;
+	opacity         : 0.5;
+	background-color: #24324D;
 }
 
 .carousel-icon .active
@@ -247,7 +262,7 @@ figure
 footer
 {
 	background: #24324d;
-	bottom: 0;
+	bottom    : 0;
 }
 
 footer .kol
@@ -257,24 +272,24 @@ footer .kol
 
 footer .kol h5
 {
-	color: #ffffff;
-	font-size: 16px;
-	font-weight: 700;
+	color         : #ffffff;
+	font-size     : 16px;
+	font-weight   : 700;
 	padding-bottom: 15px;
 }
 
 footer a
 {
-	color :#F6F6FF;
+	color    :#F6F6FF;
 	font-size: 14px;
-	margin: 0 0 20px 0;
+	margin   : 0 0 20px 0;
 }
 
 footer p
 {
-	color: #ffffff;
+	color  : #ffffff;
 	padding: 10px 0 20px 0;
-	margin: 0;
+	margin : 0;
 }
 /*/footer*/
 
@@ -282,30 +297,31 @@ footer p
 .title-table
 {
 	font-size: 16px; 
-	color: #FE8008;
+	color    : #FE8008;
 }
 
-.table
+
+table
 {
 	font-size: 14px;
 }
 
-.table thead
+table thead
 {
-	background: rgba(36, 50, 77, 0.5);
-	color: #f6f6ff;
-	letter-spacing: 1px;
+	color: #ffffff;
+	background: #24324d;
 }
+
 
 .title-fasilitas
 {
-	font-size: 16px;
+	font-size  : 16px;
 	font-weight: 600;
 }
 
 .card p
 {
-	font-size: 14px !important;
+	font-size     : 14px !important;
 	text-transform: capitalize;
 }
 
@@ -317,16 +333,18 @@ footer p
 .nav-link
 
 {
-	color: #FE8008;
+	color    : #707070;
+	font-size: 14px;
 
 }
 
 .nav-pills .nav-link:hover,
 .nav-pills .active
 {
-	border-radius: 2px;
-	background:  #FE8008 !important;
-	transition: opacity .3s;
+	background   : #ffffff !important;
+	border-radius: 4px;
+	color        : #FE8008 !important;
+	border       : 1px solid #FE8008; 
 }
 
 .catatan
@@ -338,10 +356,10 @@ footer p
 /*jadwal kapal*/
 .table .off span
 {
-	color: #ffffff;
-	padding: 3px 5px;
-	border-radius: 2px; 
-	background: rgb(229, 75, 48);
+	color         : #ffffff;
+	padding       : 3px 5px;
+	border-radius : 2px; 
+	background    : rgb(229, 75, 48);
 	text-transform: uppercase;
 }
 /*/jadwal kapal*/
@@ -349,24 +367,24 @@ footer p
 
 
 /*MOBILE VERSION*/
-@media (max-width: 992px)
-    {	
+@media (max-width: 726px)
+{	
 	section
-		{
-			min-height: 90vh;
-		}
+	{
+		min-height: 90vh;
+	}
 
 	.title-section
 	{
 		font-size: 18px;
-		padding: 20px 0 0 0;
+		padding  : 20px 0 0 0;
 	}
-	
+
 	.navbar
 	{
 		height: 60px;
 	}
-	
+
 	.navbar-brand img
 	{
 		height: 30px !important;
@@ -378,10 +396,10 @@ footer p
 	}
 	.navbar-nav
 	{
-		background: #ffffff;
-		text-align: center;	
+		background   : #ffffff;
+		text-align   : center;	
 		border-radius: 2px;
-		padding: 5px;
+		padding      : 5px;
 	}
 
 	.navbar ul li a
@@ -394,34 +412,32 @@ footer p
 		object-fit: none;
 	}
 
-
-	.img-paket
+	.caption-paket-trip .paket
 	{
-		width: 100%;
-		height: 100% auto;
+		font-size: 14px; 
 	}
 
-
-	.figure::after
+	.caption-paket-trip .title-paket
 	{
-		content: '';
-		height: 50%;
-		width: 100%;
-		border-radius: 4px;
-	
+		font-size  : 12px;
 	}
-	
+
+	.caption-paket-trip .price-paket
+	{
+		font-size  : 10px;
+	}
+
 	footer .kol h5
 	{
-		font-size: 14px;
-		font-weight: 700;
+		font-size     : 14px;
+		font-weight   : 700;
 		padding-bottom: 10px;
 	}
 
 	footer a
 	{
 		font-size: 12px;
-		margin: 0 0 10px 0;
+		margin   : 0 0 10px 0;
 	}
 
 	footer p
@@ -431,9 +447,28 @@ footer p
 
 	footer .kol
 	{
-		margin: 15px 0 5px 0;
+		margin    : 15px 0 5px 0;
 		text-align: center;
 	}
 
-	/*}*
+}
 /*MOBILE VERSION*/
+
+.preloader 
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 9999;
+	background: #f5f5f5;
+}
+
+.preloader .loading 
+{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
